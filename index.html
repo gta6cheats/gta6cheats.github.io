@@ -246,7 +246,7 @@ text-shadow:0 0 14px rgba(255,210,63,.7),0 3px 0 #b3005a}
 </div></section>
 </main>
 
-<footer class="band"><div class="wrap">Unofficial fan reference. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. No game art is used on this site, and it contains no story spoilers.</div></footer>
+<footer class="band"><div class="wrap"><nav aria-label="Guides" style="display:flex;flex-wrap:wrap;gap:8px 18px;margin-bottom:12px"><a href="/ps5" style="color:var(--teal)">PS5 cheats</a><a href="/xbox" style="color:var(--teal)">Xbox cheats</a><a href="/phone" style="color:var(--teal)">Phone cheat numbers</a><a href="/does-gta-6-have-cheats" style="color:var(--teal)">Does GTA 6 have cheats?</a></nav>Unofficial fan reference. Not affiliated with or endorsed by Rockstar Games or Take-Two Interactive. No game art is used on this site, and it contains no story spoilers.</div></footer>
 
 <script>
 {
@@ -353,6 +353,7 @@ $("sub").addEventListener("submit",e=>{e.preventDefault();
     +(file?`\n\nRemember to attach ${file.name} when you send this.`:"");
 });
 try{const p=localStorage.getItem("plat");if(p)plat=p}catch(e){}
+const hp={"#ps5":"ps","#xbox":"xb","#phone":"phone"}[location.hash];if(hp)plat=hp;
 setPlat(plat);render();
 }
 </script>
